@@ -5,3 +5,4 @@ What you practice in this project:
 •	User input → reading and processing what the user types
 •	Conditions → checking if the guess is higher, lower, or correct
 •	Random module → generating a random secret number
+    
