@@ -9,12 +9,10 @@ def give_hint(secret):
 def show_attempts(attempts):
     print("Your attempts so far:", attempts)
 
-# New function: show difference between last guess and secret
 def show_difference(secret, last_guess):
     diff = abs(secret - last_guess)
     print(f"🔍 You're {diff} away from the secret number.")
-# show_trend(secret, attempts) tells the player if their last guess
-# is closer or further from the secret number compared to the previous guess.
+
 def show_trend(secret, attempts):
     if len(attempts) < 2:
         return
@@ -24,6 +22,12 @@ def show_trend(secret, attempts):
         print("🔥 You're getting closer!")
     elif curr_diff > prev_diff:
         print("❄️ You're moving away!")
+
+# New function: calculate score based on attempts
+def calculate_score(attempts):
+    # Start with 100 points and subtract 10 for each guess beyond the first
+    score = max(0, 100 - (len(attempts) - 1) * 10)
+    return score
 
 secret = random.randint(1, 100)
 attempts = []
@@ -46,7 +50,10 @@ while True:
     else:
         print(f"Correct! The number was {secret}.")
         print(f"You guessed it in {len(attempts)} attempts.")
+        score = calculate_score(attempts)
+        print(f"🏆 Your score: {score}")
         break
 
     show_attempts(attempts)
     show_difference(secret, guess)
+    show_trend(secret, attempts)
