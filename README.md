@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Purpose of this project
 
 This game is intentionally simple.
@@ -13,17 +12,12 @@ The code is commented and easy to follow.
 
   Future improvements (optional ideas)
 	•	Add difficulty levels (easy, medium, hard)
-	•	Add a scoring system based on attempts
+✓	•	Add a scoring system based on attempts
 	•	Add time tracking for each game
 	•	Save game statistics to a file
 	•	Add colored terminal output
+	•   
 
-Author
-
-Created by Dimitar Nikolov
-GitHub: https://github.com/INikolOFF
-=======
-# Guess the Number Game
 
 A simple interactive game where the player has to guess a randomly chosen number between 1 and 100. 
 
@@ -33,6 +27,8 @@ A simple interactive game where the player has to guess a randomly chosen number
 - Keep track of all previous attempts
 - Shows how far your last guess is from the secret number (new feature)
 - Interactive console-based gameplay
+- Add a scoring system based on attempts
+- After each guess, it checks whether the player is getting closer or further away
 
 ## How to Play
 
@@ -41,9 +37,14 @@ A simple interactive game where the player has to guess a randomly chosen number
 3. Type \`0\` if you want a hint.
 4. Keep guessing until you find the secret number.
 
-git add README.md number_guessing.py
+Author
+
+Created by Dimitar Nikolov
+GitHub: https://github.com/INikolOFF
+=======
+# Guess the Number Game
 
 
 
 
->>>>>>> 4ff822c (New function)
+
