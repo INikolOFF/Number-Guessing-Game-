@@ -14,7 +14,7 @@ The code is commented and easy to follow.
 	•	Add time tracking for each game
 	•	Save game statistics to a file
 	•	Add colored terminal output
-	•   
+	ç   
 
 
 A simple interactive game where the player has to guess a randomly chosen number between 1 and 100. 
@@ -35,12 +35,11 @@ A simple interactive game where the player has to guess a randomly chosen number
 3. Type \`0\` if you want a hint.
 4. Keep guessing until you find the secret number.
 
-Author
+# Author
 
 Created by Dimitar Nikolov
 GitHub: https://github.com/INikolOFF
 =======
-# Guess the Number Game
 
 
 
