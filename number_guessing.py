@@ -1,5 +1,26 @@
 import random
 
+# Ask the player to choose difficulty
+print("Choose difficulty level:")
+print("1 = Easy (1–50)")
+print("2 = Medium (1–100)")
+print("3 = Hard (1–200)")
+
+choice = input("Your choice: ")
+
+if choice == "1":
+    max_range = 50
+    base_score = 120
+    print("🔵 Difficulty: EASY")
+elif choice == "2":
+    max_range = 100
+    base_score = 100
+    print("🟡 Difficulty: MEDIUM")
+else:
+    max_range = 200
+    base_score = 80
+    print("🔴 Difficulty: HARD")
+
 def give_hint(secret):
     if secret % 2 == 0:
         print("ℹ️ Hint: The secret number is EVEN.")
@@ -23,16 +44,15 @@ def show_trend(secret, attempts):
     elif curr_diff > prev_diff:
         print("❄️ You're moving away!")
 
-# New function: calculate score based on attempts
-def calculate_score(attempts):
-    # Start with 100 points and subtract 10 for each guess beyond the first
-    score = max(0, 100 - (len(attempts) - 1) * 10)
+# Updated scoring depending on difficulty
+def calculate_score(attempts, base_score):
+    score = max(0, base_score - (len(attempts) - 1) * 10)
     return score
 
-secret = random.randint(1, 100)
+secret = random.randint(1, max_range)
 attempts = []
 
-print("🎲 Guess the number between 1 and 100!")
+print(f"🎲 Guess the number between 1 and {max_range}!")
 print("Type 0 if you want a hint!")
 
 while True:
@@ -50,7 +70,7 @@ while True:
     else:
         print(f"Correct! The number was {secret}.")
         print(f"You guessed it in {len(attempts)} attempts.")
-        score = calculate_score(attempts)
+        score = calculate_score(attempts, base_score)
         print(f"🏆 Your score: {score}")
         break
 
