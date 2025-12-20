@@ -73,7 +73,4 @@ while True:
         score = calculate_score(attempts, base_score)
         print(f"🏆 Your score: {score}")
         break
-
-    show_attempts(attempts)
-    show_difference(secret, guess)
     show_trend(secret, attempts)
